@@ -5599,36 +5599,6 @@ function addMessagesSearch() {
     }
 }
 
-// Function to search conversations
-function searchConversations(query) {
-    const conversations = document.querySelectorAll('.conversation');
-    const searchTerm = query.toLowerCase().trim();
-    
-    conversations.forEach(conversation => {
-        const name = conversation.querySelector('.conversation-name').textContent.toLowerCase();
-        const preview = conversation.querySelector('.conversation-preview').textContent.toLowerCase();
-        
-        if (name.includes(searchTerm) || preview.includes(searchTerm)) {
-            conversation.style.display = 'flex';
-        } else {
-            conversation.style.display = 'none';
-        }
-    });
-}
-
-// Initialize messages search when messages section is loaded
-function initializeMessagesSection() {
-    addMessagesSearch();
-}
-
-// Call this when switching to messages section
-function switchSection(sectionId) {
-    // ... existing code ...
-    
-    if (sectionId === 'messagesSection') {
-        initializeMessagesSection();
-    }
-}
 </script>
 </body>
 </html>}
